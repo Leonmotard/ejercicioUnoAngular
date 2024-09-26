@@ -17,26 +17,5 @@ header{
     font-size: 45px;
 }
 
-.menu{
-    margin-left: 100px;
-    flex-grow: 2;
-    color: #343f44;
-}
 
-.menu ul{
-    display: flex;
-    list-style-type: none;
-}
 
-.menu li {
-    margin-right: 30px;
-    font-weight: 600;
-}
-
-.outline-button {
-    padding: 10px 20px;
-    background-color: transparent;
-    border: solid 2px #2e86fd;
-    color: #2e86fd;
-    font-weight: bold;
-}
