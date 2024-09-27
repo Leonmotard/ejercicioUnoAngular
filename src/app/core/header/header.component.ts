@@ -17,18 +17,18 @@ import { HeaderMenuComponent } from './header-menu/header-menu.component';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  menuItems = [
+  menuItems: MenuItem[] = [
     {
       text: 'Free Landing Pages',
       route: '/landing' 
     },
     {
       text: 'Features',
-      route: ''
+      route: '/landing'
     },
     {
       text:'Service',
-      route: ''
+      route: '/landing'
     },
     {
       text:'Pricing',

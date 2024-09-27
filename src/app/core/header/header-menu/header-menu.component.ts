@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { MenuItem } from '../../Model/menu-item.model';
 
 @Component({
   selector: 'app-header-menu',
@@ -14,8 +15,5 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './header-menu.component.scss',
 })
 export class HeaderMenuComponent {
-  @Input() menuItems?:{
-    text: string,
-    route: string
-  }[];
+  @Input() menuItems?: Array<MenuItem>;
 }

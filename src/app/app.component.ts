@@ -4,6 +4,7 @@ import { HeaderComponent } from './core/header/header.component';
 import { LandingPageComponent } from './views/landing-page/landing-page.component';
 import { IconCardComponent } from './core/icon-card/icon-card.component';
 import { CommonModule } from '@angular/common';
+import { Feature } from './core/Model/feature.model';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -17,7 +18,7 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'ejercicioUno';
-  features = [
+  features: Feature[] = [
     {
       icon: 'add_box',
       title: 'Easy to use',
