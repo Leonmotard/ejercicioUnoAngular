@@ -54,15 +54,7 @@ export class AppComponent implements OnInit, OnDestroy{
   )
   }
 
-  newFeature(){
-    this.featureService.postFeatures({
-      id: 4,
-      icon: 'home',
-      description: 'descripción aleatoria',
-      title: 'feature test'
-    }as Feature).subscribe();
-  }
-
+  
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }

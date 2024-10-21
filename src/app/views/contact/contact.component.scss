@@ -1,0 +1,56 @@
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    gap: 12px;   
+}
+
+.form-field label{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 60px;
+    border: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 16px;
+    color: a3a3a5;
+    input-error{
+        color: #fa2600;
+    }
+}
+
+.form-field input, textarea{
+    height: 50px;
+    border: none;
+    font-size: 16px;
+    color: #a3a3a5;
+    &.ng-invalid.ng-touched.ng-dirty{
+        border: 1px solid #fa2600
+    }
+}
+
+.form-button {
+    font-weight: 700;
+    width: 40%;
+    height: 55px;
+    padding: 2px;
+    background-color: red;
+    color: whitesmoke;
+    padding: 5px;
+    border: none;
+    margin-top: 28px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:disabled{
+        opacity: 0.6;
+    }
+}
