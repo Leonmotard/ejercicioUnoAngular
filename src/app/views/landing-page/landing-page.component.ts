@@ -16,7 +16,7 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './landing-page.component.scss'
 })
 export class LandingPageComponent {
-
+  //Reactive Form
   email= new FormControl('');
 
   updateEmail(){
