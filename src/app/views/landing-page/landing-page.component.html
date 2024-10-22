@@ -5,8 +5,14 @@
         than any website-no coding required.
     </span>
     <button outline-button (click)="newFeature()" type="button">New Feature</button>
+    <!--
+    Use of a simple reactive form
+    -->
     <form action="">
-        <input type="email" placeholder="Enter you email">
-        <button type="submit">Suscribe</button>  
+        <input type="email" placeholder="Enter you email" [formControl]="email">
+        <button type="button" (click)="updateEmail()">Suscribe</button>  
     </form>
+    <p>
+        {{email.value}}
+    </p>
 </section>
