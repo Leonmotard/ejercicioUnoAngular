@@ -33,10 +33,10 @@ export class AppComponent implements OnInit, OnDestroy{
   ngOnInit(){
     // pipes viene con la librería  RxJS
     this.subscription.add(this.featureService.getFeatures().pipe(
-      map(res=>{
+     /* map(res=>{
         res[0].title ="Hard to use"
         return res;
-      })
+      })*/
     ).subscribe(
       {
         next: res=>{

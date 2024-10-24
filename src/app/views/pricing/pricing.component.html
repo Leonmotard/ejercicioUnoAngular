@@ -1,1 +1,47 @@
-<p>pricing works!</p>
+<section class="pricing-form">
+
+    <form [formGroup]="groupForm" #formDir="ngForm" (ngSubmit)="onSubmit()">
+       
+            <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" formControlName="email" required email>
+            </div>
+            <div class="input-error" *ngIf="email?.invalid && (email?.touched || email?.dirty)">
+                <span *ngIf="email?.hasError('required')">
+                    El email es obligatorio
+                </span>
+                <span *ngIf="email?.hasError('email')">
+                    El mail no tiene un formato válido
+                </span>
+            </div>
+
+            <div class="form-field">
+                <label for="feature">Features</label>
+                <select id="feature" class="form-control" formControlName="feature">
+                    <option *ngFor="let feature of features" [value]="feature.id" >{{feature.title}}</option>
+                </select>
+            </div>
+
+            <div class="input-error" *ngIf="feature?.invalid && (feature?.touched || feature?.dirty)">
+                <span *ngIf="feature?.hasError('required')">
+                    Debe seleccionar una feature.
+                </span>
+            </div>
+
+            <div class="form-field">
+                <label for="count">Cantidad</label>
+                <input type="number" id="count" class="form-control" formControlName="count" required>
+            </div>
+
+            <div class="input-error" *ngIf="count?.invalid && (count?.touched || count?.dirty)">
+                <span *ngIf="count?.hasError('required')">
+                    Debe ingresar una cantidad.
+                </span>
+                <span *ngIf="count?.hasError('min')">La cantidad debe ser mayor a cero.</span>
+            </div>
+
+            <button type="submit" class="form-button">Solicitar</button>
+       
+    </form>
+
+</section>
